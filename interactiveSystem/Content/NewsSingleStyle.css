@@ -1,0 +1,23 @@
+﻿.newsSingleWrap{}
+
+.newsSingleDate{
+    color: #e6e6e6;
+    font-family: "helioscond","Segoe UI Light","Segoe UI","Segoe",Tahoma,Helvetica,Arial,sans-serif;
+    font-size: 1vh;
+    margin:0;
+}
+
+.newsSingleTitle{
+    color: #cccccc;
+    font-family: "helioscond","Segoe UI Light","Segoe UI","Segoe",Tahoma,Helvetica,Arial,sans-serif;
+    font-size: 1.3vh;
+    font-weight: bold;
+    margin:0;
+}
+
+.newsSingleText{
+    color: #e6e6e6;
+    font-family: "helioscond","Segoe UI Light","Segoe UI","Segoe",Tahoma,Helvetica,Arial,sans-serif;
+    font-size: 1vh;
+    margin:0;
+}

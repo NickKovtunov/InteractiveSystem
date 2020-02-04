@@ -1,0 +1,154 @@
+﻿/* TIMELINE
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.timeline ul.historyUl {
+    padding: 0 0 50px
+}
+
+.timeline ul.historyUl li.historyLi {
+  list-style-type: none;
+  position: relative;
+  width: 6px;
+  margin: 0 auto;
+  padding-top: 50px;
+  background: #fff;
+}
+
+.timeline ul.historyUl li.historyLi::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: inherit;
+}
+
+.timeline ul.historyUl li.historyLi div.historyDiv {
+  position: relative;
+  bottom: 0;
+  width: 450px;
+  padding: 9px;
+  /*background: #F45B69;*/
+  background-color: #FFFFFF;
+    border: 6px solid #FFFFFF;
+    border-radius: 2px;
+    box-shadow: 0 0 2vh 0 rgba(0, 0, 0, 0.4);
+    color: #666;
+    font-family: "helioscond","Segoe UI Light","Segoe UI","Segoe",Tahoma,Helvetica,Arial,sans-serif;
+    font-size: 1vh;
+}
+
+.timeline ul.historyUl li.historyLi div.historyDiv::before {
+  content: '';
+  position: absolute;
+  bottom: 7px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.timeline ul.historyUl li.historyLi:nth-child(odd) div.historyDiv {
+  left: 45px;
+}
+
+.timeline ul.historyUl li.historyLi:nth-child(odd) div.historyDiv::before {
+  left: -22px;
+  border-width: 8px 16px 8px 0;
+  border-color: transparent #fff transparent transparent;
+}
+
+.timeline ul.historyUl li.historyLi:nth-child(even) div.historyDiv {
+  left: -489px;
+}
+
+.timeline ul.historyUl li.historyLi:nth-child(even) div.historyDiv::before {
+  right: -22px;
+  border-width: 8px 0 8px 16px;
+  border-color: transparent transparent transparent #fff;
+}
+
+time {
+  display: block;
+      color: #0079c1;
+    font-family: "helioscond","Segoe UI Light","Segoe UI","Segoe",Tahoma,Helvetica,Arial,sans-serif;
+    font-size: 1.3vh;
+    font-weight: bold;
+  margin-bottom: 8px;
+}
+
+
+/* EFFECTS
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.timeline ul.historyUl li.historyLi::after {
+  transition: background .5s ease-in-out;
+}
+
+.timeline ul.historyUl li.historyLi.in-view::after {
+  /*background: #006ba7;*/
+  background: #ccc !important;
+}
+
+.timeline ul.historyUl li.historyLi div.historyDiv {
+  visibility: hidden;
+  opacity: 0;
+  transition: all .5s ease-in-out;
+}
+
+.timeline ul.historyUl li.historyLi:nth-child(odd) div.historyDiv {
+  transform: translate3d(200px, 0, 0);
+}
+
+.timeline ul.historyUl li.historyLi:nth-child(even) div.historyDiv {
+  transform: translate3d(-200px, 0, 0);
+}
+
+.timeline ul.historyUl li.historyLi.in-view div.historyDiv {
+  transform: none;
+  visibility: visible;
+  opacity: 1;
+}
+
+
+/* GENERAL MEDIA QUERIES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+@media screen and (max-width: 900px) {
+  .timeline ul.historyUl li.historyLi div.historyDiv {
+    width: 250px;
+  }
+  .timeline ul.historyUl li.historyLi:nth-child(even) div.historyDiv {
+    left: -289px;
+    /*250+45-6*/
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .timeline ul.historyUl li.historyLi {
+    margin-left: 20px;
+  }
+  .timeline ul.historyUl li.historyLi div.historyDiv {
+    width: calc(100vw - 91px);
+  }
+  .timeline ul.historyUl li.historyLi:nth-child(even) div.historyDiv {
+    left: 45px;
+  }
+  .timeline ul.historyUl li.historyLi:nth-child(even) div.historyDiv::before {
+    left: -22px;
+    border-width: 8px 16px 8px 0;
+    border-color: transparent #fff transparent transparent;
+  }
+}
+
+
+
+/*Для демонстарции на горизонтальном экране*/
+/*.timeline ul.historyUl li.historyLi:nth-child(even) div.historyDiv {
+  left: -26vh;
+}
+.historyDiv{
+    max-width:22vh;
+}*/

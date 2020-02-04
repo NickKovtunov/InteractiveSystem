@@ -1,0 +1,45 @@
+﻿.newsWrap{
+    border-bottom: 1px solid #e4e4e4;
+    display:block;
+    padding: 2vh;
+}
+
+.newsListDate{
+    color: #e6e6e6;
+    font-family: "helioscond","Segoe UI Light","Segoe UI","Segoe",Tahoma,Helvetica,Arial,sans-serif;
+    font-size: 1vh;
+    margin:0;
+}
+
+.newsListTitle{
+    color: #cccccc;
+    font-family: "helioscond","Segoe UI Light","Segoe UI","Segoe",Tahoma,Helvetica,Arial,sans-serif;
+    font-size: 1.3vh;
+    font-weight: bold;
+    line-height: 1.4vh;
+    margin: 0.3vh 0;
+}
+
+.newsListText{
+    color: #e6e6e6;
+    font-family: "helioscond","Segoe UI Light","Segoe UI","Segoe",Tahoma,Helvetica,Arial,sans-serif;
+    font-size: 1vh;
+    margin:0;
+}
+
+.newsWrap img{
+    float: left;
+    margin: 0 1vh 1vh 0;
+    width: 30%;
+    height: auto;
+    background-color: #FFFFFF;
+    background-size: cover;
+    border: 6px solid #FFFFFF;
+    border-radius: 2px;
+    box-shadow: 0 0 2vh 0 rgba(0, 0, 0, 0.4);
+    padding: 4px;
+}
+
+a{
+    text-decoration:none !important;
+}
